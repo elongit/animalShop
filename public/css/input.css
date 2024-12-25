@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::placeholder{
+    font-size: large;
+    font-weight: 600;
+}
+
+.style{
+    background-image: url("https://img.freepik.com/premium-vector/halloween-bone-dog-bone-vector-illustration_538002-138.jpg");
+    background-repeat: repeat;
+    background-size: 100px;
+    background-color: white;
+
+}
