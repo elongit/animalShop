@@ -10,7 +10,7 @@ import SignUp from "./pages/auth/signUp/signUp";
 import Contact from "./pages/contact/contact";
 import ShoppingCart from "./pages/product/cart";
 import CheckOutForm from "./pages/checkOutForm";
-
+import ProductDetails from "./pages/product/productDetails";
 function App() {
   return (
     <BrowserRouter>
@@ -30,11 +30,12 @@ const AppContent = () => {
       {showHeaderFooter  && <Header/>}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product" element={<ProductPage />} />
+        <Route path="/menu" element={<ProductPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<ShoppingCart />} />
+        <Route path="/product/:id"  element={<ProductDetails />} />
         <Route path="/checkOut" element={<CheckOutForm />} />
       </Routes>
       {showHeaderFooter  && <Footer/>}
