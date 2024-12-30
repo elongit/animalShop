@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import {NavLink }from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
@@ -18,7 +19,11 @@ const ProductCard = ({ item }) => {
 
             <div className="flex flex-col  p-2">
                 <div>
-                    <h4 className="text-gray-600 text-sm md:text-lg font-medium">{item.name}</h4>
+                    <h4 className="text-gray-600 text-sm md:text-lg font-medium">
+                        <NavLink to={`/product/${item.id}`}>
+                        {item.name}
+                        </NavLink>
+                    </h4>
                     <h4 className="text-gray-600 text-lg font-medium">
                         {item.price}$ /
 
@@ -40,9 +45,11 @@ const ProductCard = ({ item }) => {
 
 ProductCard.propTypes = {
     item : PropTypes.shape({
+        id : PropTypes.number.isRequired,
         name : PropTypes.string.isRequired,
         coverImg : PropTypes.string.isRequired,
         price : PropTypes.number.isRequired,
+
         
     }).isRequired
 }
