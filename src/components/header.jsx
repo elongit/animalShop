@@ -30,7 +30,7 @@ function Header() {
        
           <li>
             <NavLink
-              to="/product"
+              to="/menu"
               aria-label="Products"
               className={({ isActive }) => isActive ? 'text-primary-color' : ''}
             >
