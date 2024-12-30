@@ -1,6 +1,7 @@
 import  { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import productData from '../productData';
+import Button from '../../components/buttons/btn';
 import ProductCard from '../../components/ProductCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
@@ -40,6 +41,10 @@ const ProductDetails = () => {
             <sub className="line-through text-gray-600">${(product.price + 100).toFixed(2)}</sub>
           </span>
 
+          <div>
+            <textarea name="" id="" className='p-3 md:w-2/3 bg-slate-50 focus:ring-4 rounded outline-none focus:ring-primary-color' placeholder='What would you like to personalize this with? (e.g., name, message)'></textarea>
+          </div>
+
           <div className="flex gap-5">
             <div className="p-1 w-60 ring-2 ring-primary-color rounded-full flex justify-between items-center">
               <button
@@ -59,10 +64,12 @@ const ProductDetails = () => {
               </button>
             </div>
 
-            <button className="bg-primary-color w-96 hover:bg-secondary-color font-semibold text-white p-2 rounded text-center flex items-center justify-center space-x-2 cursor-grab">
+            <button className="bg-primary-color  hover:bg-secondary-color font-semibold text-white p-2 rounded text-center flex items-center justify-center space-x-2 cursor-grab">
               <span>Add to cart</span>
               <FontAwesomeIcon icon={faCartShopping} />
             </button>
+            
+        <Button label='Buy now!' path='/checkOut'/>
           </div>
         </section>
       </section>
