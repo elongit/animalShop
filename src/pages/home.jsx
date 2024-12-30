@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faBell } from "@fortawesome/free-solid-svg-icons";
 import Button from "../components/buttons/btn";
-import ProductCard from "../components/productCard";
+import ProductCard from "../components/ProductCard";
 import productData from "./productData";
 import HeroSectionImg from '../assets/heroSectionIm.png';
 
@@ -50,7 +51,7 @@ function Home() {
         </section>
 
         <div className="p-2 font-bold text-primary-color text-lg flex items-center gap-1">
-          <NavLink to='/product'>Explore more</NavLink>
+          <NavLink to='/menu'>Explore more</NavLink>
           <FontAwesomeIcon icon={faArrowRight} className="hover:translate-x-2 transition-all" size="1x" />
         </div>
       </section>
@@ -96,6 +97,13 @@ function Home() {
       </section>
     </main>
   );
+}
+
+BrandLogo.propTypes = {
+
+        src : PropTypes.string.isRequired,
+        alt : PropTypes.string.isRequired,
+
 }
 
 export default Home;
