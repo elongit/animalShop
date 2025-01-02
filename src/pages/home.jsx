@@ -25,7 +25,7 @@ function Home() {
             Explore high-quality products for your pets food, toys, accessories, and more delivered right to your door.
           </p>
           <div className="w-fit">
-          <Button label="Explore more" path="/product" />
+          <Button label="Explore more" path="/menu" />
           </div>
         </div>
 
